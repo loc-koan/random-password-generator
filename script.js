@@ -1,5 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var wantLength
+var wantLower
+var wantUpper
+var wantNumbers
+var wantSpecial
 
 // Write password to the #password input
 function writePassword() {
