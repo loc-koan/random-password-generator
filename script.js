@@ -18,8 +18,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-console.log(wantLength);
-console.log(wantLower);
-console.log(wantUpper);
-console.log(wantNumbers);
-console.log(wantSpecial);
+console.log("Please enter a number for the length you want your password to be = " + wantLength);
+console.log("Do you want to include lower cases in your password? = " + wantLower);
+console.log("Do you want to include upper cases in your password? = "+ wantUpper);
+console.log("Do you want to include numbers in your password? = "+ wantNumbers);
+console.log("Do you want to include special characters in your password? = "+ wantSpecial);
