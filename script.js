@@ -17,3 +17,9 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+console.log(wantLength);
+console.log(wantLower);
+console.log(wantUpper);
+console.log(wantNumbers);
+console.log(wantSpecial);
