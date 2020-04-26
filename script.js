@@ -1,10 +1,10 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var wantLength
-var wantLower
-var wantUpper
-var wantNumbers
-var wantSpecial
+var wantLength = prompt("Please enter a number for the length you want your password to be.");
+var wantLower = confirm("Do you want to include lower cases in your password?");
+var wantUpper = confirm("Do you want to include upper cases in your password?");
+var wantNumbers = confirm("Do you want to include numbers in your password?");
+var wantSpecial = confirm("Do you want to include special characters in your password?");
 
 // Write password to the #password input
 function writePassword() {
