@@ -12,18 +12,24 @@ console.log("Do you want to include lower cases in your password? = " + wantLowe
 console.log("Do you want to include upper cases in your password? = "+ wantUpper);
 console.log("Do you want to include numbers in your password? = "+ wantNumbers);
 console.log("Do you want to include special characters in your password? = "+ wantSpecial);
+console.log(typeof wantLength) // string
+console.log(typeof Lower); // boolean
+console.log(typeof Upper); // boolean
+console.log(typeof Numbers); // boolean
+console.log(typeof Special); // boolean
 
-const LowerCharCode = arrayFromStartToEnd(65,90);
-const UpperCharCode = arrayFromStartToEnd(97,122);
-const NumbersCharCode = arrayFromStartToEnd(48,57);
-const SpecialCharCode = arrayFromStartToEnd(34,47);
+// Assignment of character code, loop that runs towards bottom
+const lowerCharCode = arrayFromStartToEnd(65,90);
+const upperCharCode = arrayFromStartToEnd(97,122);
+const numbersCharCode = arrayFromStartToEnd(48,57);
+const specialCharCode = arrayFromStartToEnd(34,47);
 
-const randomFunction = {
-  lower: LowerCharCode,
-  upper: UpperCharCode,
-  number: NumbersCharCode,
-  symbol: SpecialCharCode
-};
+/* const randomFunction = {
+  lower: lowerCharCode,
+  upper: upperCharCode,
+  number: numbersCharCode,
+  symbol: specialCharCode
+}; */
 
 // Write password to the #password input
 function writePassword() {
@@ -36,15 +42,7 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-  var Length = "wantLength" // console.log(typeof Length) = string
-  var Lower = wantLower;
-    console.log(typeof Lower); // boolean
-  var Upper = wantUpper;
-    console.log(typeof Upper); // boolean
-  var Numbers = wantNumbers;
-    console.log(typeof Numbers); // boolean
-  var Special = wantSpecial;
-    console.log(typeof Special); // boolean
+
   
   
 
