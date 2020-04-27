@@ -32,20 +32,18 @@ const specialCharCode = arrayFromStartToStop(34,47);
 }; */
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
+function writePassword(wantLength, wantLower, wantUpper, wantNumbers, wantSpecial) {
+  /*var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password;*/
+  console.log(lowerCharCode)
 
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-  /* const writePassword = password(wantLength, wantLower, wantUpper, wantNumbers, wantSpecial); */
 
-  
-  
 
 function arrayFromStartToStop(start, stop) {
   const array = [] // array starts as blank
