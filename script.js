@@ -1,10 +1,15 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var wantLength = prompt("Please enter a number for the length you want your password to be.");
+var wantLength = prompt("Please enter a number between 8-128, this will be the length of your password.");
 var wantLower = confirm("Do you want to include lower cases in your password?");
 var wantUpper = confirm("Do you want to include upper cases in your password?");
 var wantNumbers = confirm("Do you want to include numbers in your password?");
 var wantSpecial = confirm("Do you want to include special characters in your password?");
+
+const LowerCharCode = arrayFromStartToEnd(65,90);
+const UpperCharCode = arrayFromStartToEnd(97,122);
+const NumbersCharCode = arrayFromStartToEnd(48,57);
+const SpecialCharCode = arrayFromStartToEnd(34,47);
 
 // Write password to the #password input
 function writePassword() {
@@ -18,16 +23,25 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// logs to confirm user selections 
+
 console.log("Please enter a number for the length you want your password to be = " + wantLength);
 console.log("Do you want to include lower cases in your password? = " + wantLower);
 console.log("Do you want to include upper cases in your password? = "+ wantUpper);
 console.log("Do you want to include numbers in your password? = "+ wantNumbers);
 console.log("Do you want to include special characters in your password? = "+ wantSpecial);
 
-/* 2*2*2*2 = 16 if and else (somehow include length), convert using switch */
+function arrayFromStartToEnd(start, end) {
+  const array = [] // array starts as blank
+  for (let i = start; i <= end; i++ ) {
+    array.push(i) // push inserts into the current array list
+  }
+  return array
+}
 
-/* <script>
-var day;
+/* 2*2*2*2 = 16 combinations of if and else (somehow include length), reduce using switch */
+
+/* var day;
 switch (xxxxx) {
   case 1:
     user selects = YYYY;
@@ -55,4 +69,4 @@ switch (xxxxx) {
     break;
   default:
     text = "Please select again";
-} */
+} this cant be the correct path, this was only half of outcomes*/
