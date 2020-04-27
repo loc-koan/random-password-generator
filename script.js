@@ -6,10 +6,24 @@ var wantUpper = confirm("Do you want to include upper cases in your password?");
 var wantNumbers = confirm("Do you want to include numbers in your password?");
 var wantSpecial = confirm("Do you want to include special characters in your password?");
 
+// logs to confirm user selections 
+console.log("Please enter a number for the length you want your password to be = " + wantLength);
+console.log("Do you want to include lower cases in your password? = " + wantLower);
+console.log("Do you want to include upper cases in your password? = "+ wantUpper);
+console.log("Do you want to include numbers in your password? = "+ wantNumbers);
+console.log("Do you want to include special characters in your password? = "+ wantSpecial);
+
 const LowerCharCode = arrayFromStartToEnd(65,90);
 const UpperCharCode = arrayFromStartToEnd(97,122);
 const NumbersCharCode = arrayFromStartToEnd(48,57);
 const SpecialCharCode = arrayFromStartToEnd(34,47);
+
+const randomFunction = {
+  lower: LowerCharCode,
+  upper: UpperCharCode,
+  number: NumbersCharCode,
+  symbol: SpecialCharCode
+};
 
 // Write password to the #password input
 function writePassword() {
@@ -22,14 +36,17 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-// logs to confirm user selections 
-
-console.log("Please enter a number for the length you want your password to be = " + wantLength);
-console.log("Do you want to include lower cases in your password? = " + wantLower);
-console.log("Do you want to include upper cases in your password? = "+ wantUpper);
-console.log("Do you want to include numbers in your password? = "+ wantNumbers);
-console.log("Do you want to include special characters in your password? = "+ wantSpecial);
+  var Length = "wantLength" // console.log(typeof Length) = string
+  var Lower = wantLower;
+    console.log(typeof Lower); // boolean
+  var Upper = wantUpper;
+    console.log(typeof Upper); // boolean
+  var Numbers = wantNumbers;
+    console.log(typeof Numbers); // boolean
+  var Special = wantSpecial;
+    console.log(typeof Special); // boolean
+  
+  
 
 function arrayFromStartToEnd(start, end) {
   const array = [] // array starts as blank
