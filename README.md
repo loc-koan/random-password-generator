@@ -1,6 +1,15 @@
 # random-password-generator
 random password generator application / activity
 
+references:
+
+https://www.w3schools.com/js/default.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+https://getbootstrap.com/docs/4.4/getting-started/introduction/ 
+https://www.youtube.com/watch?v=9sT03jEwcaw
+https://www.youtube.com/watch?v=iKo9pDKKHnc
+https://www.youtube.com/watch?v=duNmhKgtcsI
+
 # 03 JavaScript: Password Generator
 
 Create an application that generates a random password based on user-selected criteria. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.

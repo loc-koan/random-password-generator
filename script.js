@@ -23,3 +23,36 @@ console.log("Do you want to include lower cases in your password? = " + wantLowe
 console.log("Do you want to include upper cases in your password? = "+ wantUpper);
 console.log("Do you want to include numbers in your password? = "+ wantNumbers);
 console.log("Do you want to include special characters in your password? = "+ wantSpecial);
+
+/* 2*2*2*2 = 16 if and else (somehow include length), convert using switch */
+
+/* <script>
+var day;
+switch (xxxxx) {
+  case 1:
+    user selects = YYYY;
+    break;
+  case 2:
+    user selects = YYYN;
+    break;
+  case 3:
+    user selects = YYNY;
+    break;
+  case 4:
+    user selects = YNYY;
+    break;
+  case 5:
+    user selects = YNNY;
+    break;
+  case 6:
+    user selects = YNYN;
+    break;
+  case 7:
+    user selects = YNNN;
+    break;
+  case 8:
+    user selects = YYNN;
+    break;
+  default:
+    text = "Please select again";
+} */
