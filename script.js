@@ -12,7 +12,7 @@ console.log("Do you want to include lower cases in your password? = " + wantLowe
 console.log("Do you want to include upper cases in your password? = "+ wantUpper);
 console.log("Do you want to include numbers in your password? = "+ wantNumbers);
 console.log("Do you want to include special characters in your password? = "+ wantSpecial);
-console.log(typeof wantLength) // string
+console.log(typeof wantLength); // string
 console.log(typeof wantLower); // boolean
 console.log(typeof wantUpper); // boolean
 console.log(typeof wantNumbers); // boolean
@@ -33,11 +33,14 @@ const specialCharCode = arrayFromStartToStop(34,47);
 
 // Write password to the #password input
 function writePassword(wantLength, wantLower, wantUpper, wantNumbers, wantSpecial) {
-  /*var password = generatePassword();
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;*/
-  console.log(lowerCharCode)
+  passwordText.value = password;
+  // console.log(lowerCharCode);
+  // console.log(upperCharCode);
+  // console.log(numbersCharCode);
+  // console.log(specialCharCode);
 
 }
 
