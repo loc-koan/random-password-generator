@@ -20,10 +20,10 @@ console.log(typeof wantNumbers); // boolean
 console.log(typeof wantSpecial); // boolean
 
 // Assignment of character code, loop that runs towards bottom
-const lowerCharCode = arrayFromStartToStop(65,90);
-const upperCharCode = arrayFromStartToStop(97,122);
-const numbersCharCode = arrayFromStartToStop(48,57);
-const specialCharCode = arrayFromStartToStop(34,47);
+const lowerCharCodes = arrayFromStartToStop(65,90);
+const upperCharCodes = arrayFromStartToStop(97,122);
+const numbersCharCodes = arrayFromStartToStop(48,57);
+const specialCharCodes = arrayFromStartToStop(34,47);
 
 /* const randomFunction = {
   lower: lowerCharCode,
@@ -33,26 +33,29 @@ const specialCharCode = arrayFromStartToStop(34,47);
 }; */
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword(lowerCharCode, upperCharCode, numbersCharCode, specialCharCode));
+generateBtn.addEventListener("click", writePassword(wantLength, lowerCharCodes, upperCharCodes, numbersCharCodes, specialCharCodes));
 
 // Write password to the #password input
 function writePassword(wantLength, wantLower, wantUpper, wantNumbers, wantSpecial) {
   let generatePassword = []
+  let charCodes = lowerCharCodes
   //var password = generatePassword;
   //passwordText.value = password;
   //generatePassword.value = document.querySelector("#password");
 
-  if(wantLower) charCodes = charCodes.concat(lowerCharCode);
-  if(wantUpper) charCodes = charCodes.concat(upperCharCode);
-  if(wantNumbers) charCodes = charCodes.concat(numbersCharCode);
-  if(wantSpecial) charCodes = charCodes.concat(specialCharCode);
+  if(wantLower) charCodes = charCodes.concat(lowerCharCodes);
+  if(wantUpper) charCodes = charCodes.concat(upperCharCodes);
+  if(wantNumbers) charCodes = charCodes.concat(numbersCharCodes);
+  if(wantSpecial) charCodes = charCodes.concat(specialCharCodes);
 
   for (let i = 0; i < wantLength; i++) {
     const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
     generatePassword.push(String.fromCharCode(characterCode))
   }
   console.log(generatePassword);
-  //return generatePassword.join("") //piecing together on blank
+  let result = generatePassword.join("")
+  console.log(wantLength);
+  document.getElementById(password).innerHTML = result //piecing together on blank
 
   // console.log(lowerCharCode);
   // console.log(upperCharCode);
