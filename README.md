@@ -11,8 +11,8 @@ https://github.com/loc-koan/random-password-generator
 
 Installation
 
-Visit https://loc-koan.github.io/ to see the final product or
-Clone my repository at https://github.com/loc-koan/loc-koan.github.io to view its code
+Visit https://loc-koan.github.io/random-password-generator/ to see the final product or
+Clone my repository at https://github.com/loc-koan/random-password-generator to view its code
 
 # References:
 
