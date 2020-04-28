@@ -5,6 +5,7 @@ var wantLower = confirm("Do you want to include lower cases in your password?");
 var wantUpper = confirm("Do you want to include upper cases in your password?");
 var wantNumbers = confirm("Do you want to include numbers in your password?");
 var wantSpecial = confirm("Do you want to include special characters in your password?");
+var writePassword
 
 // logs to confirm user selections 
 console.log("Please enter a number for the length you want your password to be = " + wantLength);
@@ -31,22 +32,33 @@ const specialCharCode = arrayFromStartToStop(34,47);
   symbol: specialCharCode
 }; */
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword(lowerCharCode, upperCharCode, numbersCharCode, specialCharCode));
+
 // Write password to the #password input
 function writePassword(wantLength, wantLower, wantUpper, wantNumbers, wantSpecial) {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let generatePassword = []
+  //var password = generatePassword;
+  //passwordText.value = password;
+  //generatePassword.value = document.querySelector("#password");
 
-  passwordText.value = password;
+  if(wantLower) charCodes = charCodes.concat(lowerCharCode);
+  if(wantUpper) charCodes = charCodes.concat(upperCharCode);
+  if(wantNumbers) charCodes = charCodes.concat(numbersCharCode);
+  if(wantSpecial) charCodes = charCodes.concat(specialCharCode);
+
+  for (let i = 0; i < wantLength; i++) {
+    const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+    generatePassword.push(String.fromCharCode(characterCode))
+  }
+  console.log(generatePassword);
+  //return generatePassword.join("") //piecing together on blank
+
   // console.log(lowerCharCode);
   // console.log(upperCharCode);
   // console.log(numbersCharCode);
   // console.log(specialCharCode);
-
 }
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 
 function arrayFromStartToStop(start, stop) {
   const array = [] // array starts as blank
